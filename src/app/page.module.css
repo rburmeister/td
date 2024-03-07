@@ -1,230 +1,558 @@
-.main {
+/* Hero Section */
+
+.hero {
+  position: relative;
+  margin-top: 50px; 
+}
+
+.hero .wrap {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-}
-
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.description p {
+  max-width: 1100px;
+  margin: 0 auto;
   position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
 }
 
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
+.hero .label {
+  font-size: 35px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: 100%;
-  width: var(--max-width);
+.hero .largeText {
+  display: flex;
+  flex-direction: column;
 }
 
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
+.hero .large {
+  font-size: 308px;
+  line-height: 280px;
+  color: #54C9FF;
+  background: radial-gradient(circle at center, rgba(8, 108, 181, 0.5), transparent 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
   display: inline-block;
-  transition: transform 200ms;
 }
 
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
+.hero .medicalProfessionalImage {
+  position: absolute;
+  right: -180px;
+  top: 24px;
 }
 
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
+.hero .medicalProfessionalFamilyImage {
+  position: absolute;
+  left: -144px;
+  bottom: 3px;
 }
 
-.center {
+.hero .box1 {
+  width: 645px;
+  height: 79px;
+  background: #E5F2F8;
+  opacity: 0.7;
+  mix-blend-mode: overlay;
+  position: absolute;
+  top: 267px;
+  left: 92px;
+}
+
+.hero .box2 {
+  width: 709px;
+  height: 86px;
+  background: #E5F2F8;
+  opacity: 0.7;
+  mix-blend-mode: overlay;
+  position: absolute;
+  top: 415px;
+  right: -115px;
+}
+
+.hero h1 {
+  max-width: 800px;
+  font-weight: normal;
+  font-size: 30px;
+  margin-left: 254px;
+  margin-top: 64px;
+  line-height: 50px;
+}
+
+/* Email Sign Up Section */
+
+.emailSignUp {
+  margin-top: 200px;
+  margin-bottom: 175px;
+  position: relative;
+}
+
+.emailSignUp .wrap {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  padding: 4rem 0;
+  padding: 0 24px;
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
+.emailSignUp form {
+  display: flex;
 }
 
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
+.emailSignUp input {
+  padding-left: 26px;
+  font-size: 25px;
+  height: 78px;
+  line-height: normal;
+  border: 1px solid #E5F2F854;
+  min-width: 415px;
+  width: 100%;
+  background: #E5F2F80D;
+  color: rgba(229,242,248,0.52);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
-.center::before,
-.center::after {
-  content: "";
-  left: 50%;
+.emailSignUp input::placeholder {
+  font-size: 25px;
+  letter-spacing: 1px;
+  color: rgba(229,242,248,0.52);
+  line-height: normal;
+}
+
+.emailSignUp button {
+  background: var(--orange);
+  border: 1px solid var(--orange);
+  font-size: 17px;
+  letter-spacing: 2px;
+  border: none;
+  white-space: nowrap;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 0px 54px 0px #FF763B99;
+  text-transform: uppercase;
+  min-width: 296px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.emailSignUp button:hover {
+  box-shadow: none;
+}
+
+
+.emailSignUp img {
   position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
+  top: -96px;
+  left: 64px;
+  transform: translate(0,40px) rotate(15deg);
+  opacity: 0;
 }
 
-.logo {
+.emailSignUp p {
+  max-width: 620px;
+  margin-top: 44px;
+  color: var(--text-light-40);
+  text-align: center;
+  font-size: 12px;
+  line-height: 21px;
+}
+
+/* Featured Images Section */
+
+.featuredImages .wrap {
+  display: flex;
+  align-items: center;
+}
+
+.featuredImages .womanProfessionalImage {
+  transform: translate(0,40px) scale(0.95);
+  opacity: 0;
+}
+
+.featuredImages .dotGridImage {
+  margin-left: 114px;
+  margin-top: -96px;
+  transform: translate(0,40px);
+  opacity: 0;
+}
+
+/* Nationwide Healthcare Section */
+
+.nationwideHealthcare {
   position: relative;
-}
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
+  background: #001A2E;
+  padding: 64px;
+  margin-left: 64px;
+  margin-top: -128px;
+  margin-bottom: 167px;
+  transform: translate(0,40px);
 }
 
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
+.nationwideHealthcare .content {
+  margin-right: 96px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
+.nationwideHealthcare h2 {
+  font-size: 67px;
+  line-height: 86px;
+  max-width: 850px;
+  margin-bottom: 64px;
+  font-weight: 400;
+  letter-spacing: -3px;
+}
+
+.nationwideHealthcare p {
+  max-width: 440px;
+  font-size: 20px;
+  color: var(--text-light-60);
+  line-height: 32px;
+  letter-spacing: .5px;
+}
+
+.nationwideHealthcare .contentWrap {
+  display: flex;
+}
+
+.nationwideHealthcare .content a {
+  color: var(--text-light-60);
+  text-transform: uppercase;
+  margin-top: auto;
+  font-size: 16px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+.nationwideHealthcare .content a:hover, .nationwideHealthcare .content a:active, .nationwideHealthcare .content a:focus  {
+  color: var(--orange);
+}
+
+
+/* Responsive  */
+
+@media (max-width: 991px){
+
+  .hero .wrap {
+    max-width: 700px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
+  .hero .label {
+    font-size: 24px;
   }
 
-  .card {
-    padding: 1rem 2.5rem;
+  .hero .large {
+    font-size: 220px;
+    line-height: 202px;
   }
 
-  .card h2 {
-    margin-bottom: 0.5rem;
+  .hero h1 {
+    font-size: 22px;
+    margin-left: 177px;
+    margin-top: 33px;
+    line-height: 32px;
   }
 
-  .center {
-    padding: 8rem 0 6rem;
+  .hero .accessTextImage {
+    width: 635px;
+    height: auto;
   }
 
-  .center::before {
-    transform: none;
-    height: 300px;
+  .hero .box1 {
+    width: 483px;
+    height: 58px;
+    top: 203px;
+    left: 0px;
   }
 
-  .description {
-    font-size: 0.8rem;
+  .hero .box2 {
+    width: 483px;
+    height: 75px;
+    top: 289px;
+    right: -115px;
   }
 
-  .description a {
-    padding: 1rem;
+  .hero .medicalProfessionalImage {
+    width: 200px;
+    height: auto;
   }
 
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
+  .hero .medicalProfessionalFamilyImage {
+    width: 250px;
+    height: auto;
+    bottom: 35px;
+    left: -165px;
+  }
+
+  .emailSignUp {
+    margin-top: 128px;
+    margin-bottom: 128px;
+  }
+
+  .emailSignUp img {
+    width: 100px;
+    height: 100px;
+    left: 48px;
+  }
+
+  .emailSignUp input {
+    min-width: 300px;
+    padding: 16px;
+  }
+
+  .emailSignUp input::placeholder {
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+
+  .emailSignUp button {
+    padding: 16px;
+    font-size: 16px;
+    letter-spacing: 0;
+    min-width: auto;
+  }
+
+  .emailSignUp p {
+    max-width: 450px;
+  }
+
+  .featuredImages .womanProfessionalImage {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+
+  .featuredImages .dotGridImage {
+    width: 175px;  
+    height: 175px;
+    margin-left: 64px;
+  }
+
+  .nationwideHealthcare {
+    padding: 32px;
+    margin: -64px 0 64px 24px;
+  }
+
+  .nationwideHealthcare h2 {
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 32px;
+    max-width: 500px;
+    letter-spacing: -1px;
+  }
+
+  .nationwideHealthcare p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .nationwideHealthcare .content a {
+    margin: 32px 0 0 0;
+  }
+
+  .nationwideHealthcare .nationwideHealthcareImage {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+@media (max-width: 767px){
+
+  .hero {
+    margin-top: 64px;
+  }
+
+  .hero .wrap {
+    max-width: 600px;
+  }
+
+  .hero .label {
+    font-size: 18px;
+  }
+
+  .hero .accessTextImage {
+    max-width: 400px;
     width: 100%;
   }
 
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
+  .hero .box1 {
+    width: 400px;
+    height: 36px;
+    top: 157px;
+    left: 0px;
   }
 
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
+  .hero .box2 {
+    width: 434px;
+    height: 45px;
+    top: 236px;
+    right: -115px;
+  }
+
+  .hero .medicalProfessionalImage {
+    width: 160px;
+    right: -68px;
+  }
+
+  .hero .medicalProfessionalFamilyImage {
+    width: 190px;
+    left: -58px;
+    bottom: 33px;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+    margin-left: 120px;
+    margin-top: 33px;
+    max-width: 396px;
+  }
+
+  .emailSignUp {
+    margin-bottom: 64px;
+  }
+
+  .emailSignUp img {
+    width: 75px;
+    height: 75px;
+    left: 24px;
+  }
+
+  .emailSignUp input {
+    min-width: 200px;
+  }
+
+  .emailSignUp button {
+    font-size: 14px;
+  }
+
+  .emailSignUp p {
+    max-width: 500px;
+    font-size: 14px;
+  }
+
+  .featuredImages .womanProfessionalImage {
+    width: 300px;
+    height: auto;
+  }
+
+  .featuredImages .dotGridImage {
+    width: 100px;  
+    height: 100px;
+    margin-top: -64px;
+  }
+
+  .nationwideHealthcare {
+    padding: 24px;
+    margin: -48px 0 64px 24px;
+  }
+
+  .nationwideHealthcare .content {
+    margin-right: 0;
+  }
+
+  .nationwideHealthcare h2, .nationwideHealthcare p {
+    max-width: 90%;
+  }
+
+  .nationwideHealthcare h2 {
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 32px;
+    letter-spacing: 0;
+  }
+
+  .nationwideHealthcare .contentWrap {
+    flex-direction: column;
+  }
+
+  .nationwideHealthcare p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .nationwideHealthcare .content a {
+    margin: 32px 0 48px 0;
+  }
+
+  .nationwideHealthcare .nationwideHealthcareImage {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
+@media (max-width: 600px){
+
+  .hero .wrap {
+    max-width: 400px;
+  }
+
+  .hero .medicalProfessionalImage {
+    right: -165px;
+  }
+
+  .hero .medicalProfessionalFamilyImage {
+    width: 150px;
+    left: -112px;
+    bottom: 124px;
+  }
+
+  .hero .box1 {
+    width: 306px;
+    top: 149px;
+  }
+
+  .hero .box2 {
+    width: 350px;
+  }
+
+  .hero h1 {
+    margin-left: 69px;
+  }
+
+  .emailSignUp {
+    margin-top: 84px;
+  }
+
+  .emailSignUp p {
+    max-width: 400px;
+  }
+
+  .emailSignUp input {
+    min-width: auto;
+  }
+
+  .emailSignUp img {
+    left: -30px;
+    top: -58px;
+  }
+
+  .featuredImages .dotGridImage {
+    width: 75px;
+    height: 75px;
+    margin-left: 32px;
+  }
+
+  .nationwideHealthcare h2 {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 24px;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
+@media (max-width: 400px){
+  .hero .medicalProfessionalFamilyImage, .hero .medicalProfessionalImage {
+    display: none;
   }
 
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  .hero .wrap {
+    padding: 0 24px;
   }
-}
 
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
+  .hero h1 {
+    margin-left: 0;
   }
 }

@@ -1,76 +1,7 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+  --text-light-40: rgba(229,242,248,0.4);
+  --text-light-60: rgba(229,242,248,0.6);
+  --orange: #FF763C;
 }
 
 * {
@@ -85,23 +16,106 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #E5F2F8;
+  background: #003E6D;
+  background-image: radial-gradient(circle at center, rgba(8, 108, 181, 0.9), transparent 70%);
+  background-size: 1600px 1600px, cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: -200px;
+  font-family: var(--font-messina-sans);
+}
+
+.kronaOne {
+  font-family: var(--font-krona-one);
+  font-weight: 400;
+}
+
+.messinaSans {
+  font-family: var(--font-messina-sans)
+}
+
+.messinaSansBold {
+  font-family: var(--font-messina-sans-bold)
+}
+
+.messinaSerifItalic {
+  font-family: var(--font-messina-serif-italic);
+}
+
+.messinaSerifItalicBold {
+  font-family: var(--font-messina-serif-italic-bold);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a:hover, a:active {
+  color: #FF763C;
+}
+
+.wrap {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header {
+  position: relative;
+  margin-top: 50px;
+}
+
+header .wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.notification {
+  position: relative;
+  z-index: 5;
+  background: #00192C;
+  padding: 16px 24px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 10px 64px 0px;
 }
