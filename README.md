@@ -1,7 +1,7 @@
 # Website Coding Test 
 
 ## Introduction
-I've completed the coding test provided by Thorium Digital. It was a fun and challenging design that allowed me to showcase my skills. You can view the demo here: [td.rossburmeister.com](http://td.rossburmeister.com)
+I've completed the coding test provided by Thorium Digital. It was a fun and challenging design that allowed me to showcase my skills. You can view the demo here: [td.rossburmeister.com](https://td.rossburmeister.com)
 
 ### Technical Background
 - **Broad Experience**: 
